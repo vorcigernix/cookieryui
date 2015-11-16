@@ -1,0 +1,51 @@
+ArtsEntertainment
+AutosVehicles
+BeautyFitness
+BooksLiterature
+BusinessIndustrial
+ComputersElectronics
+Finance
+FoodDrink
+Games
+HobbiesLeisure
+HomeGarden
+InternetTelecom
+JobsEducation
+LawGovernment
+News
+OnlineCommunities
+PeopleSociety
+PetsAnimals
+RealEstate
+Reference
+Science
+Shopping
+Sports
+Travel
+WorldLocalities
+
+Arts & Entertainment
+Autos & Vehicles
+Beauty & Fitness
+Books & Literature
+Business & Industrial
+Computers & Electronics
+Finance
+Food & Drink
+Games
+Hobbies & Leisure
+Home & Garden
+Internet & Telecom
+Jobs & Education
+Law & Government
+News
+Online Communities
+People & Society
+Pets & Animals
+Real Estate
+Reference
+Science
+Shopping
+Sports
+Travel
+World Localities

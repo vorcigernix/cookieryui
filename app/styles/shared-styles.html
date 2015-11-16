@@ -1,0 +1,44 @@
+<!-- shared styles for all elements and index.html -->
+<dom-module id="shared-styles">
+  <template>
+    <style>
+
+    body {
+      background: #fafafa;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+
+    .box {
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+      color: #9E9E9E;
+      background: #fafafa;
+      padding: 5px;
+      transition: box-shadow 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+      #mainToolbar {
+        background-image: url(../images/bg.webp);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+      }
+
+
+      .page-title {
+        @apply(--paper-font-display2);
+      }
+      paper-menu a > *, paper-menu paper-item > *, paper-menu paper-icon-item > * {
+        pointer-events: none;
+      }
+
+      @media (max-width: 600px) {
+        .page-title {
+          font-size: 24px!important;
+        }
+      }
+    </style>
+  </template>
+</dom-module>

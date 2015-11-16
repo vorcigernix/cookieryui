@@ -1,0 +1,315 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Polymer Starter Kit" />
+  <title>Cookiery</title>
+  <!-- Place favicon.ico in the `app/` directory -->
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#2E3AA1">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Cookiery">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Cookiery">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endreplace-->
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+  <span id="browser-sync-binding"></span>
+  <template is="dom-bind" id="app">
+
+    <paper-drawer-panel id="paperDrawerPanel">
+      <!-- Drawer Scroll Header Panel -->
+      <paper-scroll-header-panel drawer fixed>
+
+        <!-- Drawer Toolbar -->
+        <paper-toolbar id="drawerToolbar">
+          <span class="paper-font-title">Filter pages</span>
+        </paper-toolbar>
+
+        <!-- Drawer Content -->
+        <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
+          <a data-route="home" href="/" on-click="onDataRouteClick">
+            <iron-icon icon="select-all"></iron-icon>
+            <span>All</span>
+          </a>
+          <a data-route="CategoryDetail/1" href="/CategoryDetail/ArtsEntertainment" on-click="onDataRouteClick">
+            <iron-icon icon="theaters"></iron-icon>
+            <span>Arts & Entertainment</span>
+          </a>
+          <a data-route="CategoryDetail/2" href="/CategoryDetail/AutosVehicles" on-click="onDataRouteClick">
+            <iron-icon icon="maps:directions-car"></iron-icon>
+            <span>Autos & Vehicles</span>
+          </a>
+          <a data-route="CategoryDetail/3" href="/CategoryDetail/BeautyFitness" on-click="onDataRouteClick">
+            <iron-icon icon="face"></iron-icon>
+            <span>Beauty & Fitness</span>
+          </a>
+          <a data-route="CategoryDetail/4" href="/CategoryDetail/BooksLiterature" on-click="onDataRouteClick">
+            <iron-icon icon="book"></iron-icon>
+            <span>Books & Literature</span>
+          </a>
+          <a data-route="CategoryDetail/5" href="/CategoryDetail/BusinessIndustrial" on-click="onDataRouteClick">
+            <iron-icon icon="account-balance"></iron-icon>
+            <span>Business & Industrial</span>
+          </a>
+          <a data-route="CategoryDetail/6" href="/CategoryDetail/ComputersElectronics" on-click="onDataRouteClick">
+            <iron-icon icon="android"></iron-icon>
+            <span>Computers & Electronics</span>
+          </a>
+          <a data-route="CategoryDetail/7" href="/CategoryDetail/Finance" on-click="onDataRouteClick">
+            <iron-icon icon="maps:local-atm"></iron-icon>
+            <span>Finance</span>
+          </a>
+          <a data-route="CategoryDetail/8" href="/CategoryDetail/FoodDrink" on-click="onDataRouteClick">
+            <iron-icon icon="maps:local-bar"></iron-icon>
+            <span>Food & Drink</span>
+          </a>
+          <a data-route="CategoryDetail/9" href="/CategoryDetail/Games" on-click="onDataRouteClick">
+            <iron-icon icon="av:games"></iron-icon>
+            <span>Games</span>
+          </a>
+          <a data-route="CategoryDetail/10" href="/CategoryDetail/HobbiesLeisure" on-click="onDataRouteClick">
+            <iron-icon icon="maps:local-florist"></iron-icon>
+            <span>Hobbies & Leisure</span>
+          </a>
+          <a data-route="CategoryDetail/11" href="/CategoryDetail/HomeGarden" on-click="onDataRouteClick">
+            <iron-icon icon="home"></iron-icon>
+            <span>Home & Garden</span>
+          </a>
+          <a data-route="CategoryDetail/12" href="/CategoryDetail/InternetTelecom" on-click="onDataRouteClick">
+            <iron-icon icon="http"></iron-icon>
+            <span>Internet & Telecom</span>
+          </a>
+          <a data-route="CategoryDetail/13" href="/CategoryDetail/JobsEducation" on-click="onDataRouteClick">
+            <iron-icon icon="work"></iron-icon>
+            <span>Jobs & Education</span>
+          </a>
+          <a data-route="CategoryDetail/14" href="/CategoryDetail/LawGovernment" on-click="onDataRouteClick">
+            <iron-icon icon="event-seat"></iron-icon>
+            <span>Law & Government</span>
+          </a>
+          <a data-route="CategoryDetail/15" href="/CategoryDetail/News" on-click="onDataRouteClick">
+            <iron-icon icon="av:radio"></iron-icon>
+            <span>News</span>
+          </a>
+          <a data-route="CategoryDetail/16" href="/CategoryDetail/OnlineCommunities" on-click="onDataRouteClick">
+            <iron-icon icon="supervisor-account"></iron-icon>
+            <span>Online Communities</span>
+          </a>
+          <a data-route="CategoryDetail/17" href="/CategoryDetail/PeopleSociety" on-click="onDataRouteClick">
+            <iron-icon icon="flag"></iron-icon>
+            <span>People & Society</span>
+          </a>
+          <a data-route="CategoryDetail/18" href="/CategoryDetail/PetsAnimals" on-click="onDataRouteClick">
+            <iron-icon icon="gesture"></iron-icon>
+            <span>Pets & Animals</span>
+          </a>
+          <a data-route="CategoryDetail/19" href="/CategoryDetail/RealEstate" on-click="onDataRouteClick">
+            <iron-icon icon="maps:store-mall-directory" class="smallicon"></iron-icon>
+            <span>Real Estate</span>
+          </a>
+          <a data-route="CategoryDetail/20" href="/CategoryDetail/Reference" on-click="onDataRouteClick">
+            <iron-icon icon="maps:local-library"></iron-icon>
+            <span>Reference</span>
+          </a>
+          <a data-route="CategoryDetail/21" href="/CategoryDetail/Science" on-click="onDataRouteClick">
+            <iron-icon icon="invert-colors"></iron-icon>
+            <span>Science</span>
+          </a>
+          <a data-route="CategoryDetail/22" href="/CategoryDetail/Shopping" on-click="onDataRouteClick">
+            <iron-icon icon="maps:local-grocery-store"></iron-icon>
+            <span>Shopping</span>
+          </a>
+          <a data-route="CategoryDetail/23" href="/CategoryDetail/Sports" on-click="onDataRouteClick">
+            <iron-icon icon="maps:directions-run"></iron-icon>
+            <span>Sports</span>
+          </a>
+          <a data-route="CategoryDetail/24" href="/CategoryDetail/Travel" on-click="onDataRouteClick">
+            <iron-icon icon="language"></iron-icon>
+            <span>Travel</span>
+          </a>
+          <a data-route="CategoryDetail/25" href="/CategoryDetail/WorldLocalities" on-click="onDataRouteClick">
+            <iron-icon icon="maps:pin-drop"></iron-icon>
+            <span>World Localities</span>
+          </a>
+
+        </paper-menu>
+      </paper-scroll-header-panel>
+
+      <!-- Main Area -->
+      <paper-scroll-header-panel main condenses keep-condensed-header>
+
+        <!-- Main Toolbar -->
+        <paper-toolbar id="mainToolbar" class="tall">
+          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+          <span class="flex"></span>
+
+
+          <!-- Toolbar icons -->
+          <a data-route="AddPage" href="/AddPage" on-click="onDataRouteClick">
+            <paper-fab icon="create" title="Add site"></paper-fab>
+          </a>
+          <paper-icon-button icon="help"></paper-icon-button>
+
+          <!-- Application name -->
+          <div class="middle middle-container center horizontal layout">
+            <iron-icon icon="settings-applications" class="headicon"></iron-icon>
+            <div class="app-name">Cookiery</div>
+          </div>
+
+          <!-- Application sub title -->
+          <div class="bottom bottom-container center horizontal layout">
+            <div class="bottom-title paper-font-subhead">comfortable way to accept "cookies"</div>
+          </div>
+
+        </paper-toolbar>
+
+        <!-- Weird REST functions -->
+        <!-- Main Content -->
+        <div class="content">
+          <iron-pages attr-for-selected="data-route" selected="{{route}}">
+
+            <section data-route="home">
+              <paper-material class="cookielike" elevation="1">
+                <p class="paper-font-subhead">Welcome to Cookiery</p>
+                <p class="paper-font-body2">We built this page as a result of European Union regulation, requesting every website using (very common)
+                 <a href="https://en.wikipedia.org/wiki/HTTP_cookie" class="box">cookie technology</a> to request users permission with that. We want to make this process easy and painless for both users and websites. Therefore we provide
+                independent service allowing users to accept usage of cookies in one simple process and website developers to add their site to our categorized list.</p>
+                <p class="paper-font-body2">To simplify even more: Accepting all website categories here will save you from clicking on that annoying message about cookies on huge amount of sites.</p>
+              </paper-material>
+              <paper-material elevation="1">
+                <p class="paper-font-body2">You can accept cookies from all sites included in our service here:</p>
+                    <paper-input  label="Your Name" id="usernameinput">
+                        <paper-icon-button suffix onclick="saveInput()" icon="done" alt="Save" title="Save" tabindex="0">
+                        </paper-icon-button>
+                      </paper-input>
+                <p class="paper-font-caption" >By signing above, I agree with using HTTP Cookie technology on all sites included in "Cookiery" services on this computer. </p>
+              </paper-material>
+
+              <paper-material elevation="1" class="paper-font-body2">
+                <p class="paper-font-subhead">What are cookies?</p>
+                  A cookie is a small text file that a website saves on your computer or mobile device when you visit the site. It enables the website to remember your actions and preferences (such as login, language, font size and other display preferences) over a period of time, so you don’t have to keep re-entering them whenever you come back to the site or browse from one page to another.
+              </paper-material>
+
+            </section>
+
+            <section data-route="CategoryDetail">
+              <paper-material elevation="1">
+                <h2 class="page-title">Category</h2>
+                <p>This is the category section</p>
+                Category:<span>{{params.category}}</span>
+              </paper-material>
+
+            </section>
+            <section data-route="AddPage">
+              <paper-material elevation="1">
+              <h2 class="page-title">Add new site</h2>
+              <p>On this dialog you can add a site you own to our service. You would need to add a small script on the website too (so, yes, adding page you don't own doesn't do anything).
+                You need to select at least one category your site belongs to.
+               </p>
+               <div class="layout horizontal">
+                <div class="flex-4"><paper-input label="Site Name" auto-validate pattern="^([\x00-\x7F]|([\xC2-\xDF]|\xE0[\xA0-\xBF]|\xED[\x80-\x9F]|(|[\xE1-\xEC]|[\xEE-\xEF]|\xF0[\x90-\xBF]|\xF4[\x80-\x8F]|[\xF1-\xF3][\x80-\xBF])[\x80-\xBF])[\x80-\xBF])*$" error-message="Please use valid simple site name" id="sitename" required></paper-input></div>
+                <div class="flex"></div>
+                <div class="flex-6"><paper-input label="Site Address" error-message="Not a valid site URL"  pattern="([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$" id="siteurl" required></paper-input></div>
+              </div>
+
+               <div class="horizontal-section">
+                 <paper-menu id="catmenu" attr-for-selected="value" multi required>
+                   <paper-item value="1">Arts & Entertainment</paper-item>
+                   <paper-item value="2">Autos & Vehicles</paper-item>
+                   <paper-item value="3">Beauty & Fitness</paper-item>
+                   <paper-item value="4">Books & Literature</paper-item>
+                   <paper-item value="5">Business & Industrial</paper-item>
+                   <paper-item value="6">Computers & Electronics</paper-item>
+                   <paper-item value="7">Finance</paper-item>
+                   <paper-item value="8">Food & Drink</paper-item>
+                   <paper-item value="9">Games</paper-item>
+                   <paper-item value="10">Hobbies & Leisure</paper-item>
+                   <paper-item value="11">Home & Garden</paper-item>
+                   <paper-item value="12">Internet & Telecom</paper-item>
+                   <paper-item value="13">Jobs & Education</paper-item>
+                   <paper-item value="14">Law & Government</paper-item>
+                   <paper-item value="15">News</paper-item>
+                   <paper-item value="16">Online Communities</paper-item>
+                   <paper-item value="17">People & Society</paper-item>
+                   <paper-item value="18">Pets & Animals</paper-item>
+                   <paper-item value="19">Real Estate</paper-item>
+                   <paper-item value="20">Reference</paper-item>
+                   <paper-item value="21">Science</paper-item>
+                   <paper-item value="22">Shopping</paper-item>
+                   <paper-item value="23">Sports</paper-item>
+                   <paper-item value="24">Travel</paper-item>
+                   <paper-item value="25">World Localities</paper-item>
+                 </paper-menu>
+               </div>
+                <div class="buttons">
+                    <paper-button id="newSiteButton" raised on-click="formSendHandler" disabled>Add site</paper-button>
+                </div>
+              </paper-material>
+            </section>
+          </iron-pages>
+        </div>
+
+      </paper-scroll-header-panel>
+    </paper-drawer-panel>
+
+
+    <iron-ajax id="sendSite" verbose="true" url="http://localhost:8080/sites" method="POST" handle-as="json" on-response="handleWriteResponse" debounce-duration="300"></iron-ajax>
+    <iron-ajax id="receiveSites" verbose="true" url="http://localhost:8080/sites" method="GET" handle-as="json" on-response="handleReadResponse" debounce-duration="300"></iron-ajax>
+    <iron-localstorage name="locally-set-cookiery" value="{{cookieryvalue}}"></iron-localstorage>
+
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+</body>
+
+</html>
